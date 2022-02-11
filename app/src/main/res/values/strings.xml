@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KM-Kit</string>
+    <string name="tbOpenScan">Initialize scan</string>
 </resources>

@@ -15,7 +15,7 @@ class PermissionApp {
         return pCameraG
     }
 
-    private fun requestCameraP (activity: AppCompatActivity) {
+    fun requestCameraP (activity: AppCompatActivity) {
         EasyPermissions.requestPermissions(activity, rmCameraP, pCameraCode, pCameraS)
     }
 

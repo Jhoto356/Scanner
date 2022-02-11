@@ -1,9 +1,12 @@
 package com.example.km_kit
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.km_kit.databinding.ActivityMainBinding
+import com.example.km_kit.utils.Constants.*
+import com.example.km_kit.services_activities.CameraActivity
 import com.example.km_kit.services_activities.PermissionApp
 
 class MainActivity : AppCompatActivity() {
@@ -28,10 +31,25 @@ class MainActivity : AppCompatActivity() {
 
     private fun initComponents () {
         permissionApp = PermissionApp()
+        actionButtons()
     }
 
     private fun requestPermissions () {
         permissionApp.requestPermissions(context, activity)
+    }
+
+    private fun actionButtons () {
+        pressOpenScan()
+    }
+
+    private fun pressOpenScan () {
+        binding.btnScan.setOnClickListener {
+            if (pCameraG){
+                startActivity(Intent(this, CameraActivity::class.java))
+            } else {
+                permissionApp.requestCameraP(activity)
+            }
+        }
     }
 
 }
