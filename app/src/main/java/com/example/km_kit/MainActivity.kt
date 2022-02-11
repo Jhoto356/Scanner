@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.km_kit.databinding.ActivityMainBinding
-import com.example.km_kit.services_actitvities.PermissionApp
+import com.example.km_kit.services_activities.PermissionApp
 
 class MainActivity : AppCompatActivity() {
 

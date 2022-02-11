@@ -1,4 +1,4 @@
-package com.example.km_kit.services_actitvities
+package com.example.km_kit.services_activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
